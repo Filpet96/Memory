@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(50, 50, 50);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 3%;
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 10%;
+  height: 10%;
+  background: white;
+  margin: 1%;
+  border-radius: 50%;
+  width: 20%;
+  height: auto;
+  padding-top: 20%;
+  display: inline-block;
+}
+
+.circle-matched {
+  background-color: green;
+}
+
+.circle.flipped {
+  background-color: black;
+}
