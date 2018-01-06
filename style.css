@@ -13,3 +13,9 @@ body {
   width: 100% !important;
   margin-left: 5%;
 }
+
+.actor img {
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+}
