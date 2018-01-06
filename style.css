@@ -36,6 +36,15 @@ body {
   transform: rotateY(0deg);
 }
 
+/* Theme */
+
+.green .actor {
+  background: rgb(40, 40, 40);
+  background-image: url(../);
+  background-position: center;
+  background-size: cover;
+}
+
 .actor img {
   width: 100%;
   z-index: 999;
