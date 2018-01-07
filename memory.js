@@ -30,3 +30,11 @@ start = function() {
       }
       return array;
     }
+    let busy = false;
+    let p_elem;
+
+    const Memory = function(level) {
+      this.level = level ? Number(level) : 1;
+      this.open_actor = -1;
+      this.matched_actors = [];
+    };
