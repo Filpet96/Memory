@@ -40,7 +40,7 @@ body {
 
 .green .actor {
   background: rgb(40, 40, 40);
-  background-image: url(../);
+  background-image: url(./images/play-button.svg);
   background-position: center;
   background-size: cover;
 }
