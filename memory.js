@@ -142,3 +142,4 @@ start = function() {
     };
   }
 };
+start();
