@@ -38,4 +38,31 @@ start = function() {
     this.open_actor = -1;
     this.matched_actors = [];
   };
+
+
+  for (let i = 0, l = actors.length; i < l; i++) {
+    actors[i].onclick = function() {
+      if (busy) return;
+      busy = true;
+      // let text = document.createTextNode(circles[this.dataset.actor]);
+      const image = document.createElement('img');
+
+      const imageArray = [
+        '', // 0 is unused
+        './images/dicaprio.jpg',
+        './images/robertdeniro.jpg',
+        './images/robin-williams.jpg',
+        './images/tom-hanks.jpg',
+        './images/morgan-freeman.jpg',
+        './images/charles-chaplin.jpg',
+        './images/JackNicholson.jpg',
+        './images/kevin-spacey.jpg'
+      ]
+
+      const imagerep = imageArray[circles[this.dataset.actor]]
+
+      image.src = imagerep;
+      Game.flip(this, image);
+    };
+  }
 };
