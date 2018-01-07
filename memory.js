@@ -77,6 +77,32 @@ start = function() {
         p_elem = elem;
         //keep the actor open
         busy = false;
+      } else {
+        elem.appendChild(image);
+        elem.setAttribute("class", "actor active");
+
+        if (circles[this.open_actor] === circles[elem.dataset.actor]) {
+          console.log("test4");
+          //if yes, keep both actors openy
+          this.matched_actors.push(this.open_actor, elem.dataset.actor);
+          if (this.matched_actors.length == 16) {
+            this.success();
+          }
+          busy = false;
+        } else {
+          console.log("test5");
+          //if no, close both actors
+          setTimeout(function() {
+            p_elem.setAttribute("class", "actor");
+            p_elem.innerHTML = "";
+            elem.setAttribute("class", "actor");
+            elem.innerHTML = "";
+            busy = false;
+          }, 1000);
+        }
+
+        //must: reset this.open_actor
+        this.open_actor = -1;
       }
 
 
