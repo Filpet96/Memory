@@ -39,6 +39,26 @@ start = function() {
     this.matched_actors = [];
   };
 
+  Memory.prototype.createplatform = function() {
+    document.body.innerHTML = "";
+    /* Parent platform */
+    let cell;
+    const platform = newElem();
+    const actors = this.level + this.level;
+
+    platform.setAttribute("id", "level_" + this.level);
+    platform.setAttribute("class", "platform " + "green");
+    /* actors */
+    for (let i = 0, n = actors * actors - 1; i <= n; i++) {
+      cell = newElem();
+      cell.setAttribute("class", "actor");
+      cell.setAttribute("data-actor", i);
+      platform.appendChild(cell);
+    }
+    /* Add platform to Body */
+    document.body.appendChild(platform);
+    return platform;
+  };
 
   for (let i = 0, l = actors.length; i < l; i++) {
     actors[i].onclick = function() {
