@@ -9,3 +9,11 @@ start = function() {
       );
       return elem;
     };
+    newElem.prototype.getactor = function() {
+      return this.elem.getAttribute("data-actor");
+    };
+
+    function shuffle(array) {
+      let currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
