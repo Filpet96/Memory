@@ -18,7 +18,6 @@ body {
 }
 
 .actor {
-  /*backface-visibility: hidden;*/
   color: #fff;
   float: left;
   border-radius: 50%;
@@ -38,9 +37,7 @@ body {
   transform: rotateY(0deg);
 }
 
-/* Theme */
-
-.green .actor {
+.moviecircle .actor {
   background: rgb(40, 40, 40);
   background-image: url(./images/play-button.svg);
   background-position: center;

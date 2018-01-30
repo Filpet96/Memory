@@ -31,7 +31,7 @@ start = function() {
     return array;
   }
   let busy = false;
-  let p_elem;
+  let p_elementent;
 
   const Memory = function(level) {
     this.level = level ? Number(level) : 1;
@@ -47,7 +47,7 @@ start = function() {
     const actors = this.level + this.level;
 
     platform.setAttribute("id", "level_" + this.level);
-    platform.setAttribute("class", "platform " + "green");
+    platform.setAttribute("class", "platform " + "moviecircle");
     /* actors */
     for (let i = 0, n = actors * actors - 1; i <= n; i++) {
       cell = newElem();
@@ -65,7 +65,6 @@ start = function() {
       this.matched_actors.indexOf(elem.dataset.actor) != -1 ||
       this.open_actor == elem.dataset.actor
     ) {
-      console.log(this.matched_actors.indexOf(elem.dataset.actor));
       busy = false;
       return;
     }
@@ -74,7 +73,7 @@ start = function() {
       elem.appendChild(image);
       elem.setAttribute("class", "actor active");
       this.open_actor = elem.dataset.actor;
-      p_elem = elem;
+      p_element = elem;
       //keep the actor open
       busy = false;
     } else {
@@ -82,7 +81,6 @@ start = function() {
       elem.setAttribute("class", "actor active");
 
       if (circles[this.open_actor] === circles[elem.dataset.actor]) {
-        console.log("test4");
         //if yes, keep both actors openy
         this.matched_actors.push(this.open_actor, elem.dataset.actor);
         if (this.matched_actors.length == 16) {
@@ -90,11 +88,10 @@ start = function() {
         }
         busy = false;
       } else {
-        console.log("test5");
         //if no, close both actors
         setTimeout(function() {
-          p_elem.setAttribute("class", "actor");
-          p_elem.innerHTML = "";
+          p_element.setAttribute("class", "actor");
+          p_element.innerHTML = "";
           elem.setAttribute("class", "actor");
           elem.innerHTML = "";
           busy = false;
@@ -106,7 +103,7 @@ start = function() {
     }
   };
   Memory.prototype.success = function() {
-    const action = confirm("Game completed!");
+    const action = confirm("YOU MADE IT!");
     if (action == true) {
       start();
     }
@@ -135,9 +132,9 @@ start = function() {
         './images/kevin-spacey.jpg'
       ]
 
-      const imagerep = imageArray[circles[this.dataset.actor]]
+      const imagearr = imageArray[circles[this.dataset.actor]]
 
-      image.src = imagerep;
+      image.src = imagearr;
       Game.flip(this, image);
     };
   }
