@@ -1,7 +1,7 @@
-# Flag-Memory
-Flag memory for Javascript assignment. 
+# Actor-Memory
+Actor memory for Javascript assignment. 
 <br>
-<img src="https://media.giphy.com/media/3o7TKv7S69WRS6awc8/giphy.gif" alt="funnyMemory" height="80%" width="80%">
+<img src="https://media.giphy.com/media/yoJC2B1sHdXJjPTnEs/giphy.gif" alt="ActorMemory" height="80%" width="80%">
 ## Puzzle-Project with Javascript
 <p>This is the first Javascript project. The project is to build a memory game with the following criterias:<p>
 <ul>
@@ -42,4 +42,4 @@ The repository must contain a .editorconfig file with your preferred settings.<b
 ### Testing done by:
 
 -> Christopher Modigsson<br>
--> Edvin Wiberg<br>
+-> Andreas Nord<br>
