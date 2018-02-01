@@ -1,7 +1,8 @@
+// let resetButton = document.getElementById("reset-button");
 start = function() {
-  const starGame = function(selector) {
-    return document.querySelector(selector);
-  };
+
+
+
   // Create an element with given parameters else creates a div
   const newElem = function(elementName) {
     const elem = document.createElement(
@@ -136,7 +137,22 @@ start = function() {
 
       image.src = imagearr;
       Game.flip(this, image);
+
+
     };
+
+
   }
+
+
+  const button = document.createElement("button");
+  button.addEventListener("click", clearGame);
+  button.innerHTML = "Replay";
+
+  document.querySelector("body").appendChild(button);
 };
+
+function clearGame() {
+  start();
+}
 start();
